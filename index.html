@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Post Instagram con Bootstrap</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous"/>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <header class="encabezado">
+            <nav class="navbar bg-body-tertiary">
+                <div class="container-fluid">
+                    <a class="navbar-brand"><i class="fa-brands fa-instagram"></i> Instagram</a>
+                    <form class="d-flex" role="search">
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            Crear uno nuevo post
+                        </button>
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h1
+                                            class="modal-title fs-5"
+                                            id="exampleModalLabel"
+                                        >
+                                            Crear un nuevo Post
+                                        </h1>
+                                        <button
+                                            type="button"
+                                            class="btn-close"
+                                            data-bs-dismiss="modal"
+                                            aria-label="Close"
+                                        ></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        Comentario:
+                                        <div class="textarea">
+                                        <textarea name="" id="" placeholder="Agrega tu Pie de Post"></textarea>
+                                        </div>
+                                        <!-- Botones dentro del modal -->
+                                        <div>
+                                            <button class="botonModal"><i class="fa-solid fa-camera"></i></button>
+                                            <button class="botonModal"><i class="fa-solid fa-location-dot"></i></button>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button
+                                            type="button"
+                                            class="btn btn-secondary"
+                                            data-bs-dismiss="modal"
+                                        >
+                                            Cerrar
+                                        </button>
+                                        <button
+                                            type="button"
+                                            class="btn btn-primary"
+                                        >
+                                            Guardar Cambios
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- DropDown -->
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle gear" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fa-solid fa-gear"></i>
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li><a class="dropdown-item" href="#">Perfil</a></li>
+                                <li><a class="dropdown-item" href="#">Configuraciones</a></li>
+                                <li><a class="dropdown-item" href="#">Politicas de Privacidad</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item text-danger" href="#">Cerrar Seccion</a></li>
+                            </ul>
+                        </div>
+                    </form>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <!-- Modo Columna y Modo fila -->
+            <ul class="nav nav-tabs d-flex justify-content-center" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true"><i class="fa-solid fa-table-cells-large"></i></button>
+                </li>
+                <li class="nav-item" role="presentation">
+                <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false"><i class="fa-solid fa-image"></i></button>
+                </li>
+            </ul>
+            <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+                    <!-- FOTOS COLUMNAS DE 3 -->
+                    <div class="container text-center">
+                        <div class="row row-cols-3">
+                            <div class="col">
+                                <img src=https://picsum.photos/id/369/400/400 alt="" class="img-thumbnail"/>
+                            </div>
+                            <div class="col">
+                                <img src="https://picsum.photos/id/230/400/400" alt="" class="img-thumbnail">
+                            </div>
+                            <div class="col">
+                                <img src="https://picsum.photos/id/238/400/400" alt="" class="img-thumbnail">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container text-center">
+                        <div class="row row-cols-3">
+                            <div class="col">
+                                <img src="https://picsum.photos/id/237/400/400" alt="" class="img-thumbnail">
+                            </div>
+                            <div class="col">
+                                <img src="https://picsum.photos/id/250/400/400" alt="" class="img-thumbnail">
+                            </div>
+                            <div class="col">
+                                <img src="https://picsum.photos/id/268/400/400" alt="" class="img-thumbnail">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container text-center">
+                        <div class="row row-cols-3">
+                            <div class="col">
+                                <img src="https://picsum.photos/id/301/400/400" alt="" class="img-thumbnail">
+                            </div>
+                            <div class="col">
+                                <img src="https://picsum.photos/id/270/400/400" alt="" class="img-thumbnail">
+                            </div>
+                            <div class="col">
+                                <img src="https://picsum.photos/id/211/400/400" alt="" class="img-thumbnail">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade d-flex justify-content-center" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+                    <!-- FOTOS EN COLUMNA -->
+                    <!-- FOTO NUMERO 1 -->
+                    <div class="card" style="width: 35rem;">
+                        <header class="p-2">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="d-flex align-items-center">
+                                <i class="fa-brands fa-html5 fs-1 m-2"></i>
+                                <p class="m-2">
+                                    HTML <br />
+                                    Rigoberto
+                                </p>
+                                </div>
+                                <div><i class="fa-solid fa-ellipsis-vertical fs-1 m-2"></i></div>
+                            </div>
+                        </header>
+                        <img src="https://picsum.photos/id/369/400/400" class="card-img-top" alt="...">
+                        <div class="card-body">
+                        <p class="card-text">Liked by
+                            <strong>4GeeksAcademy, html5, Web</strong> and
+                            <strong>100,000 others.</strong></p>
+                        </div>
+                        <!-- FOTO NUMERO 2 -->
+                        <header class="p-2">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="d-flex align-items-center">
+                                <i class="fa-solid fa-circle-user fs-1 m-2"></i>
+                                <p class="m-2">
+                                    Alex <br />
+                                    Guilarte
+                                </p>
+                                </div>
+                                <div><i class="fa-solid fa-ellipsis-vertical fs-1 m-2"></i></div>
+                            </div>
+                        </header>
+                        <img src="https://picsum.photos/id/230/400/400" class="card-img-top" alt="...">
+                        <div class="card-body">
+                        <p class="card-text">Liked by
+                            <strong>4GeeksAcademy, html5, Web</strong> and
+                            <strong>100,000 others.</strong></p>
+                        </div>
+                        <!-- FOTO NUMERO 3 -->
+                        <header class="p-2">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="d-flex align-items-center">
+                                <i class="fa-solid fa-face-smile fs-1 m-2"></i>
+                                <p class="m-2">
+                                    HTML <br />
+                                    Rigoberto
+                                </p>
+                                </div>
+                                <div><i class="fa-solid fa-ellipsis-vertical fs-1 m-2"></i></div>
+                            </div>
+                        </header>
+                        <img src="https://picsum.photos/id/238/400/400" class="card-img-top" alt="...">
+                        <div class="card-body">
+                        <p class="card-text">Liked by
+                            <strong>4GeeksAcademy, html5, Web</strong> and
+                            <strong>100,000 others.</strong></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <script src ="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"; integrity = "sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"; crossorigin = "anonymous";></script>
+    </body>
+</html>
